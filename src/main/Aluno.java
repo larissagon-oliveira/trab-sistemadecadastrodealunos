@@ -1,12 +1,13 @@
+import java.util.UUID;
 
 public class Aluno{
     //ATRIBUTOS
     private String nome;
-    private long dataNasc;
-    private long telefone;
+    private String dataNasc;
+    private String telefone;
     private String curso;
-    private long cpf;
-    private int id;
+    private String cpf;
+    private String id;
     
     //METODOS
 
@@ -18,7 +19,6 @@ public class Aluno{
         this.nome = nome;
     }
 
-
     public String getCurso() {
         return curso;
     }
@@ -27,47 +27,60 @@ public class Aluno{
         this.curso = curso;
     }
 
-    public long getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(long dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
-    public long getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(long telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    
+    public String getId() {return this.id;}
+
+    public Object[] toObjArr() {
+        return new Object[]{ this.id, this.nome, this.telefone, this.curso, this.dataNasc, this.cpf };
+    }
     //CONSTRUTOR PADRÃO
     public Aluno(){
-        
+
     }
     //CONSTRUTORES
-    public Aluno(String nome, long telefone, String curso, long dataNasc, long cpf){
+    public Aluno(String nome, String telefone, String curso, String dataNasc, String cpf){
+        UUID uuid = UUID. randomUUID();
+        this.id = uuid.toString();
         this.nome = nome;
         this.dataNasc = dataNasc;
         this.curso = curso;
         this.cpf = cpf;
         this.telefone = telefone;
-
+    }
+    public Aluno(String id, String nome, String telefone, String curso, String dataNasc, String cpf){
+        this.id = id;
+        this.nome = nome;
+        this.dataNasc = dataNasc;
+        this.curso = curso;
+        this.cpf = cpf;
+        this.telefone = telefone;
     }
 }

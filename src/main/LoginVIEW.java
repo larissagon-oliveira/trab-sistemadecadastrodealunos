@@ -1,12 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-
-//import DAO.FuncionarioDAO;
-//import DTO.FuncionarioDTO;
-import java.sql.ResultSet;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -184,6 +175,6 @@ public class LoginVIEW extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void setDefaultButton(JButton btnEntrar) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
